@@ -1,0 +1,13 @@
+#datepicker{
+  border-radius: 30rem 0 0 30rem;
+  border: none;
+  height: 50px;
+}
+
+#datepicker:focus{
+  box-shadow: none;
+}
+
+#datepicker::placeholder {
+  font-style: italic;
+}

@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CustomDatePicker from './CustomDatePicker';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="form-group mb-4">
+            <div id="dateform" class="input-group p-0 shadow-sm">
+              <CustomDatePicker> </CustomDatePicker>
+              <div class ="input-group-append"><span class="input-group-text px-4"><i class="fa fa-clock-o"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
   );
 }
 
