@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/earth-image/static/css/main.d1b05096.chunk.css",
+    "main.js": "/earth-image/static/js/main.cd9e9a5f.chunk.js",
+    "main.js.map": "/earth-image/static/js/main.cd9e9a5f.chunk.js.map",
+    "runtime-main.js": "/earth-image/static/js/runtime-main.e2438217.js",
+    "runtime-main.js.map": "/earth-image/static/js/runtime-main.e2438217.js.map",
+    "static/js/2.2358f2a6.chunk.js": "/earth-image/static/js/2.2358f2a6.chunk.js",
+    "static/js/2.2358f2a6.chunk.js.map": "/earth-image/static/js/2.2358f2a6.chunk.js.map",
+    "index.html": "/earth-image/index.html",
+    "precache-manifest.faceeb5e0cfdeaa8471bc53fbf028758.js": "/earth-image/precache-manifest.faceeb5e0cfdeaa8471bc53fbf028758.js",
+    "service-worker.js": "/earth-image/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/earth-image/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.2358f2a6.chunk.js.LICENSE.txt": "/earth-image/static/js/2.2358f2a6.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/earth-image/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2438217.js",
+    "static/js/2.2358f2a6.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.cd9e9a5f.chunk.js"
+  ]
+}
