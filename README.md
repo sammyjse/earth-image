@@ -9,3 +9,6 @@ another date to compare pictures.
 
 I have always had a bit of an interest in astronomy and I thought this API was pretty cool. Will use this as practice to work on my 
 Python / Django app "form". 
+
+
+To access the web page : http://sammyjse.github.io/earth-image/
