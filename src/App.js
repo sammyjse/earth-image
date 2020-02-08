@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import Image from './Image';
 
 class App extends React.Component{
 
   constructor(props) {
     super(props);
     this.state = {
-      imageDate: ''
+      imageDate: '',
+      displayImage: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -16,18 +18,24 @@ class App extends React.Component{
     this.setState({ imageDate: event.target.value });
   };
 
-  handleClick(event) {
-    alert('A date was submitted for EPI: ' + this.state.imageDate);
-    event.preventDefault();
+  handleClick() {
+    const {displayImage} = this.state;
+    this.setState({displayImage : !displayImage});
   }
 
 render(){
-  return (
 
+  const isDisplayImage = this.state.displayImage;
+  let imageTrigger;
+
+
+
+
+  return (
       <div className="row">
         <div className="col-md-6 mx-auto">
           <div className="form-group mb-4">
-          <p class="text-center text-white"> Choose a date for Earth Polychromatic Image </p>
+          <p className="text-center text-white"> Choose a date for Earth Polychromatic Image </p>
             <div className="date input-group p-0 shadow-sm">
               <input
                 type="date"
@@ -40,11 +48,7 @@ render(){
             <div className="text-center" id="findEPI">
               <button onClick={this.handleClick} type="button" className="btn btn-primary">Find EPI</button>
             </div>
-
-            <div className="text-center" id="earthImage">
-              <img src="https://epic.gsfc.nasa.gov/archive/natural/2015/10/31/png/epic_1b_20151031074844.png" class="img-thumbnail"/>
-            </div>
-
+              {this.state.displayImage && <Image imageDate = {this.state.imageDate}/>}
           </div>
         </div>
       </div>
