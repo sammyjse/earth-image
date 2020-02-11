@@ -26,10 +26,6 @@ class App extends React.Component{
 render(){
 
   const isDisplayImage = this.state.displayImage;
-  let imageTrigger;
-
-
-
 
   return (
       <div className="row">
@@ -48,7 +44,7 @@ render(){
             <div className="text-center" id="findEPI">
               <button onClick={this.handleClick} type="button" className="btn btn-primary">Find EPI</button>
             </div>
-              {this.state.displayImage && <Image imageDate = {this.state.imageDate}/>}
+              {isDisplayImage ? <Image imageDate = {this.state.imageDate}/> : ''}
           </div>
         </div>
       </div>
