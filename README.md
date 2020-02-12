@@ -1,3 +1,32 @@
+## Project Description 
+
+URL : https://sammyjse.github.io/earth-image/
+
+There were multiple reasons why I wanted to achieve from working on this project. Although there is are more features I would like to add to project, I have been able to complete the core goal that I set out from the start. 
+
+1. One of my goals was to brush up on my React, JavaScript, HTML, CSS skills. So I used this project to not only do that but also learn how to make API calls in React
+
+2. I have always had a bit of an interest in astronomy, and the EPIC API provides daily images of the Earth using DSCOVR's Earth Polychromatic Imaging Camera instrument. I am available to view the earth at different perspectives, and astronomical events such as the solar eclipse. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
