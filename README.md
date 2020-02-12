@@ -8,7 +8,7 @@ There were multiple reasons why I wanted to achieve from working on this project
 
 2. I have always had a bit of an interest in astronomy, and the EPIC API provides daily images of the Earth using DSCOVR's Earth Polychromatic Imaging Camera instrument. I am available to view the earth at different perspectives, and astronomical events such as the solar eclipse. 
 
-For example on Feb 26th 2017 there was an Annular Solar Eclipse. The images for this through the React app have been added in the repository. 
+For example on Feb 26th 2017 there was an Annular Solar Eclipse. The images for this through the React app have been added in the repository. https://github.com/sammyjse/earth-image/blob/master/feb-26-2017%20solar%20eclipse%20images.pdf
 
 3. I am also able to view any landscape changes / differences due to climate, however most of these changes are minute as the API only provides images after 2015. 
 
