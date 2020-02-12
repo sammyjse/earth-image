@@ -2,9 +2,6 @@ import React from 'react';
 import './Image.css';
 class Image extends React.Component {
 
-
-  // https://stackoverflow.com/questions/60164160/react-render-new-images-on-button-click-new-fetch-call-to-retrieve-images-each
-
   constructor(props) {
     super(props);
     const dateSplit = props.imageDate.split('-');
@@ -17,7 +14,8 @@ class Image extends React.Component {
       retrieveImageAPI: "https://epic.gsfc.nasa.gov/archive/natural/" + dateSplit[0] +
        "/" + dateSplit[1] + "/" + dateSplit[2] + "/png/epic_1b_",
       epiDate : [],
-      displayImages: false
+      displayImages: false,
+      errorMessage : ''
     };
   }
 
@@ -31,7 +29,14 @@ class Image extends React.Component {
     }).then(images => {
       epiDate.push(images.map(image => retrieveImageAPI + image.identifier + ".png"));
       console.log(epiDate);
-      this.setState({displayImages : true});
+
+      if (epiDate[0].length == 0){
+        this.setState({displayImages : false});
+        this.setState({errorMessage : alert("EPI is not available for the date chosen.")});
+      } else {
+        this.setState({displayImages : true});
+        this.setState({errorMessage : ''});
+      }
     });
   }
 
@@ -39,17 +44,17 @@ class Image extends React.Component {
 
     const displayImages = this.state.displayImages;
     const images = this.state.epiDate[0];
+    const errorMessage = this.state.errorMessage;
 
     return (
-    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-    <div className="carousel-inner">
-    {displayImages && images.map(function(imageSrc) {
+    <div className="row">
+    {displayImages ? images.map(function(imageSrc) {
                 return (
-                  <div className="carousel-item active">
+                  <div className="column">
                     <img className="d-block w-100" src={ imageSrc }/>
                   </div>
                 );
-              })} </div></div>
+              }) : (errorMessage)} </div>
     );
   }
 

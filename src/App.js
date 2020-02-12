@@ -10,22 +10,21 @@ class App extends React.Component{
       imageDate: '',
       displayImage: false
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ imageDate: event.target.value });
+  handleChange = (event) => {
+     this.setState({ imageDate: event.target.value });
   };
 
-  handleClick() {
-    const {displayImage} = this.state;
-    this.setState({displayImage : !displayImage});
+  handleClick = () => {
+     const {displayImage} = this.state;
+     this.setState({displayImage : !displayImage});
   }
 
 render(){
 
   const isDisplayImage = this.state.displayImage;
+  const imageDate = this.state.imageDate;
 
   return (
       <div className="row">
@@ -35,7 +34,7 @@ render(){
             <div className="date input-group p-0 shadow-sm">
               <input
                 type="date"
-                value = {this.state.imageDate}
+                value = {imageDate}
                 onChange = {this.handleChange}
                 className="form-control py-4 px-4"
                 id="imageDate"/>
@@ -44,7 +43,7 @@ render(){
             <div className="text-center" id="findEPI">
               <button onClick={this.handleClick} type="button" className="btn btn-primary">Find EPI</button>
             </div>
-              {isDisplayImage ? <Image imageDate = {this.state.imageDate}/> : ''}
+              {isDisplayImage ? <Image imageDate = {imageDate}/> : this.handleClick()}
           </div>
         </div>
       </div>
